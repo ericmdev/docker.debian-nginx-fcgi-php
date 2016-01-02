@@ -92,3 +92,9 @@ VOLUME ["/etc/nginx", "/srv/www", "/var/cache/nginx"]
 #
 EXPOSE 80 443
 
+#
+# Configure executable to start nginx.
+#
+ENTRYPOINT ["nginx"]
+
+
