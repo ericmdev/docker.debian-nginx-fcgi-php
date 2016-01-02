@@ -1,4 +1,4 @@
-## Docker: Debian - NGINX (PHP-FastCGI)
+## Docker: Debian - NGINX (FastCGI for PHP)
 
 [![Build Status](https://travis-ci.org/ericmdev/docker.debian-nginx-phpfcgi.svg?branch=master)](https://travis-ci.org/ericmdev/docker.debian-nginx-phpfcgi)
 
@@ -7,17 +7,25 @@
 *Requirements*
 - [Docker](https://www.docker.com/) 
 
-*Base Docker Image:*
+*Base Docker Image*
 - [debian:jessie](https://hub.docker.com/_/debian/)
+
+*Process*
+- NGINX (1.9.9)
 
 ### Development
 
-    $ docker build -t nginx/phpfcgi -f ./Dockerfile .
+    $ docker build -t nginx/fcgi-php -f ./Dockerfile .
 
-Creates an image with the tag `nginx/phpfcgi`.
+Creates an image with the tag `nginx/fcgi-php`.
 
 ### Usage
 
-    $ docker run -d --name=nginx_phpfcgi -p 8888:80 nginx/phpfcgi
+    $ docker run -d --name=nginx_fcgi_php -p 8888:80 nginx/fcgi-php
 
-Creates and starts a container with the name `nginx_phpfcgi` mapped to host port `8888`.
+Creates and starts a container with the name `nginx_fcgi_php` mapped to host port `8888`.
+
+Access the Bash shell:
+
+    $ docker exec -it nginx_fcgi_php bash
+
