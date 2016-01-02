@@ -46,3 +46,13 @@ RUN rm -rf /etc/nginx/conf.d/*
 #
 ADD files/etc/nginx/nginx.conf /etc/nginx/nginx.conf
 
+#
+# Remove default /etc/nginx/conf.d/*.
+#
+RUN rm -rf /etc/nginx/conf.d/*
+
+#
+# Add managed /etc/nginx/conf.d/php-app.conf.
+#
+ADD files/etc/nginx/conf.d/php-app.conf /etc/nginx/conf.d/php-app.conf
+
