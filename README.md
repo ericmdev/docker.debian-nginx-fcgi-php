@@ -13,3 +13,9 @@
     $ docker build -t="nginx/phpfcgi" -f ./Dockerfile .
 
 Creates an image with the tag `nginx/phpfcgi`.
+
+### Usage
+
+    $ docker run -d --name=phpfcgi --p 8888:80 nginx/phpfcgi
+
+Creates and starts a container with the name `phpfcgi` mapped to host port `8888`.
