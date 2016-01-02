@@ -11,7 +11,7 @@
 - [debian:jessie](https://hub.docker.com/_/debian/)
 
 *Process*
-- NGINX (1.9.9)
+- nginx (1.9.9)
 
 ### Development
 
