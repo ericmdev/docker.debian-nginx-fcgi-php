@@ -10,7 +10,7 @@
 
 ### Development
 
-    $ docker build -t="nginx/phpfcgi" -f ./Dockerfile .
+    $ docker build -t nginx/phpfcgi -f ./Dockerfile .
 
 Creates an image with the tag `nginx/phpfcgi`.
 
