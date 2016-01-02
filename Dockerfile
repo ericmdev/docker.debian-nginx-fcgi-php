@@ -65,3 +65,14 @@ ADD files/etc/nginx/fastcgi_params /etc/nginx/fastcgi_params
 # Add managed /etc/nginx/conf.d/upstream.conf.
 #
 ADD php-upstream.conf /etc/nginx/conf.d/upstream.conf
+
+#
+# Remove `/var/www/*`.
+#
+RUN rm -rf /var/www/*
+
+#
+# Remove `/srv/www/*`.
+#
+RUN rm -rf /srv/www/*
+
