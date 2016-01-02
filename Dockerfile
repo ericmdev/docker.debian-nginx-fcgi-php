@@ -97,4 +97,7 @@ EXPOSE 80 443
 #
 ENTRYPOINT ["nginx"]
 
-
+#
+# Define default command.
+#
+CMD []
