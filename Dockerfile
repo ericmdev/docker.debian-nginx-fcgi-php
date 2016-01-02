@@ -23,3 +23,16 @@ RUN echo "deb http://nginx.org/packages/mainline/debian/ jessie nginx" >> /etc/a
 #
 ENV NGINX_VERSION 1.9.9-1~jessie
 
+#
+# Update apt and install:
+# 
+# 	- openssl
+# 	- ca-certificates
+# 	- nginx
+# 
+# Remove "/var/lib/apt/lists/*".
+#
+RUN apt-get update && \
+    apt-get install -y openssl ca-certificates nginx=${NGINX_VERSION} && \
+    rm -rf /var/lib/apt/lists/*
+
