@@ -86,3 +86,9 @@ RUN ln -sf /dev/stderr /var/log/nginx/error.log
 # Define mountable directories.
 #
 VOLUME ["/etc/nginx", "/srv/www", "/var/cache/nginx"]
+
+#
+# Listen on HTTP and HTTPS ports.
+#
+EXPOSE 80 443
+
