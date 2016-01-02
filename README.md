@@ -7,3 +7,9 @@
 
 *Base Docker Image:*
 - [debian:jessie](https://hub.docker.com/_/debian/)
+
+### Development
+
+    $ docker build -t="nginx/phpfcgi" -f ./Dockerfile .
+
+Creates an image with the tag `nginx/phpfcgi`.
