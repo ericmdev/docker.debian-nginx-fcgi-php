@@ -56,3 +56,12 @@ RUN rm -rf /etc/nginx/conf.d/*
 #
 ADD files/etc/nginx/conf.d/php-app.conf /etc/nginx/conf.d/php-app.conf
 
+#
+# Add managed fastcgi_params.
+#
+ADD files/etc/nginx/fastcgi_params /etc/nginx/fastcgi_params
+
+#
+# Add managed /etc/nginx/conf.d/upstream.conf.
+#
+ADD php-upstream.conf /etc/nginx/conf.d/upstream.conf
