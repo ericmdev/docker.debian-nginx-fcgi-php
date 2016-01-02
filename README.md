@@ -7,8 +7,11 @@
 *Requirements*
 - [Docker](https://www.docker.com/) 
 
-*Base Docker Image:*
+*Base Docker Image*
 - [debian:jessie](https://hub.docker.com/_/debian/)
+
+*Process*
+- NGINX (ver. 1.9.9)
 
 ### Development
 
