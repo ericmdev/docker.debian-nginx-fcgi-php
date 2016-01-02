@@ -1,5 +1,7 @@
 ## Docker: Debian - NGINX (PHP-FastCGI)
 
+[![Build Status](https://travis-ci.org/ericmdev/docker.debian-nginx-phpfcgi.svg?branch=master)](https://travis-ci.org/ericmdev/docker.debian-nginx-phpfcgi)
+
 **Dockerfile** of [Debian](https://www.debian.org/) [NGINX](https://www.nginx.com/) with FastCGI for PHP.
 
 *Requirements*
