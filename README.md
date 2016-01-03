@@ -13,19 +13,15 @@
 *Process*
 - nginx (1.9.9)
 
+*Docker Pull Command*
+- `docker pull ericmdev/nginx-phpfcgi`
+
 ### Development
 
-    $ docker build -t nginx/phpfcgi -f ./Dockerfile .
+    $ docker build -t nginx-phpfcgi -f ./Dockerfile .
 
-Creates an image with the tag `nginx/phpfcgi`.
+Creates an image with the tag `nginx-phpfcgi`.
 
 ### Usage
 
-    $ docker run -d --name=nginx_phpfcgi -p 8888:80 nginx/phpfcgi
-
-Creates and starts a container with the name `nginx_phpfcgi` mapped to host port `8888`.
-
-Access the Bash shell:
-
-    $ docker exec -it nginx_phpfcgi bash
-
+    $ docker run -d --name=nginx_phpfcgi -p 8888:80 nginx-phpfcgi
