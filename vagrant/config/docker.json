@@ -1,0 +1,12 @@
+{
+  "docker": {
+    "build_image": {
+    	":path": "/vagrant",
+    	":args": "-t nginx-phpfcgi"
+    },
+    "run": {
+    	":name": "nginx_phpfcgi",
+    	":image": "nginx-phpfcgi"
+    }
+  }
+}
