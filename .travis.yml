@@ -6,6 +6,6 @@ services:
   - docker
 
 script:
-  - docker build -t nginx/phpfcgi -f ./Dockerfile .
-  - docker run -d --name=nginx_phpfcgi -p 8888:80 nginx/phpfcgi
+  - docker build -t nginx-phpfcgi -f ./Dockerfile .
+  - docker run -d --name=nginx_phpfcgi -p 8888:80 nginx-phpfcgi
   - docker ps -a
