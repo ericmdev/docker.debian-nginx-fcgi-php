@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ericmdev/nginx.dockerfile.svg?branch=master)](https://travis-ci.org/ericmdev/nginx.dockerfile)
 
-**Dockerfile** of [Debian](https://www.debian.org/) [NGINX](https://www.nginx.com/).
+**Dockerfile** of [Debian](https://www.debian.org/) [NGINX (1.9.9)](https://www.nginx.com/).
 
 *Requirements*
 - [Docker](https://www.docker.com/) 
