@@ -10,9 +10,6 @@
 *Base Docker Image*
 - [ericmdev/essentials](https://hub.docker.com/r/ericmdev/essentials/)
 
-*Process*
-- nginx (1.9.9)
-
 *Docker Pull Command*
 - `docker pull ericmdev/nginx`
 
