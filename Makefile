@@ -4,14 +4,14 @@ build:
 	docker build -t nginx-image -f Dockerfile .
 
 # Stop and remove all containers.
-.PHONY: rm
-rm:
+.PHONY: clean
+clean:
 	docker stop nginx-container
 	docker rm nginx-container
 
 # Remove the image.
-.PHONY: rm-image
-rm-image:
+.PHONY: clean-image
+clean-image:
 	docker rm nginx-image
 
 # List all containers.
