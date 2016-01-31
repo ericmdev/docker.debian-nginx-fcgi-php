@@ -3,7 +3,7 @@
 # VERSION 0.0.1
 
 # Pull the base image.
-FROM ericmdev/essentials
+FROM ericmdev/essentials-common
 
 # Set the author.
 MAINTAINER Eric Mugerwa <dev@ericmugerwa.com>
@@ -20,18 +20,15 @@ RUN apt-get update && apt-get install -y \
     ca-certificates \
     nginx=${NGINX_VERSION}
 
-# Add supervisor configuration files.
-ADD ${FILES}/etc/supervisor/conf.d/supervisord.conf /etc/supervisor/conf.d/supervisord.conf 
-ADD ${FILES}/etc/supervisor/conf.d/nginx.conf /etc/supervisor/conf.d/nginx.conf 
-
 # Define mountable directories.
-VOLUME ["/srv/www", "/etc/nginx", "/var/log/nginx", "/var/cache/nginx"]
+VOLUME ["/srv/www", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/cache/nginx"]
 
-# Listen on http https ports.
-EXPOSE 80 443
+# Expose ports.
+EXPOSE 80
+EXPOSE 443
 
 # Configure executable.
-ENTRYPOINT ["/usr/bin/supervisord"]
+ENTRYPOINT []
 
 # Define default command.
-CMD []
+CMD ["nginx", "-g", "daemon off;"]
