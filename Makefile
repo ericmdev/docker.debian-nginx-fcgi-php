@@ -14,6 +14,13 @@ clean:
 clean-image:
 	docker rm nginx-image
 
+# Remove all containers and images.
+.PHONY: clean-all
+clean-all:
+	-docker stop `docker ps -a -q`
+	-docker rm --force `docker ps -qa`
+	-docker rmi --force `docker images -q`
+
 # List all containers.
 .PHONY: ls
 ls:
